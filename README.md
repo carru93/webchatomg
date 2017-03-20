@@ -1,2 +1,2 @@
-# webchatomg
-a simple web chat
+# Web Chat 
+a simple web chat coded in js powered by express
