@@ -1,5 +1,7 @@
 $(document).ready(function(){
 	$("#login").click(function(){
-		var username = getElementById("name").value;
-	});
+		var username = $("#name").val();
+		console.log(username);
+		window.location.replace("chat");
+});
 });

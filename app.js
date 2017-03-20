@@ -8,6 +8,10 @@ app.get('/', function(req, res){
 	res.sendFile(path.join(__dirname, "index.html"));
 });
 
+app.get('/chat', function(req, res){
+	res.sendFile(path.join(__dirname, "chat.html"));
+});
+
 var server = app.listen(8000, function(req, res){
 	var host = server.address().address;
 	var port = server.address().port;
