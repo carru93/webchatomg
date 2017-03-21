@@ -1,6 +1,4 @@
-username=[];
-
-$("#main_page").ready(function(){
+$(document).ready(function(){
 	$("#name").focus();	
 	
 	$("#name").keydown(function(e){
@@ -11,14 +9,11 @@ $("#main_page").ready(function(){
 	});
 	
 	$("#login").click(function(){
-		username[0] = $("#name").val();
-		console.log(username);
+		localStorage.setItem("username", $("#name").val());
+		console.log(localStorage["username"]);
 		window.location.replace("chat");
 		});
 	
 });
 
-$("#chat").ready(function(){
-				console.log(username[0]+" recived");
-				$("#username_title").append(username[0]);
-				});
+
