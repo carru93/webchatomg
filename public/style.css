@@ -1,3 +1,7 @@
+*{
+	font-family: 'Open Sans';
+}
+
 #main_title{
 	color: red;
 	text-align: center;
@@ -8,7 +12,7 @@
 
 #username_title{
 	color: red;
-	font-style: italic bold;
+	font-style: bold;
 	border: 1px solid black;
 	outline-color: green;
 	outline-style:double;
@@ -20,4 +24,42 @@
 	display:inline;
 	text-align: center;
 	margin: 10px;
+}
+
+p{
+	display: inline
+}
+
+.chatter{
+	width: 400px;
+	height: 500px;
+	border: 2px solid #ddd;
+}
+
+#messagesBox{
+	height:460px ;	
+	border-bottom: 1px solid #ddd;
+	overflow-y: scroll;
+	text-align: right;
+	padding: 5px;
+}
+
+#sendingBox{
+	width: 100%;
+	margin: 5px;	
+}
+
+#inputBox{
+	text-align:left;
+	width: 85%;
+}
+
+#sendButton{
+
+}
+
+#mex{
+	font-size:7pt;
+	font: italic;
+	color: red;
 }

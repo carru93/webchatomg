@@ -8,6 +8,7 @@
 		<meta charset = "utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel = "stylesheet" href="style.css">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 		<script typr="text/javascript" src="funzioni_chat.js"></script>
 	</head>
 	<body>
@@ -16,7 +17,34 @@
 				<div id="titolo_chat">
 					<center><h2 style="display: inline;">Logged in as:</h2><h2 id="username_title"></h2></center>
 				</div>
-			</div>	
+			</div>
+			<div class="row">
+				<div class="col-sm-4">
+					<p>Username: </p><p id="username_data"></p><br>
+					<p>Color Name:</p>
+						<select id="color_selector">
+							<option value="red">Red</option>
+							<option value="pink">Pink</option>
+							<option value="yellow">Yellow</option>
+							<option value="green">Green</option>
+							<option value="blue">Blue</option>
+							<option value="black">Black</option>
+						</select><br>
+					<p>Chars written: </p><p id="chars"></p><br>
+					<p><button id = "azzera">Reset char counter</button></p>
+				</div>
+				<div class="col-sm-8">
+					<div class="chatter">
+						<div id="messagesBox">
+							<mex>ciao</mex>
+						</div>
+						<div id="sendingBox">
+							<input type="text" value="" placeholder="Scrivi un messaggio" id="inputBox">
+							<button id="sendButton">Send</button>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</body>
 </html>

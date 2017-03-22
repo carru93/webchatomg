@@ -1,3 +1,4 @@
 account in database, modifiche stile
 chat
 page profilo
+cancella inputBox dopo sendButton.click
