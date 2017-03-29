@@ -18,9 +18,13 @@ $(document).ready(function(){
 				});
 				
 				$("#sendButton").click(function(){
+					
 					var l = $("#inputBox").val();
 					char_scritti += l.length;
 					$("#chars").text(char_scritti);
+					
+					$("#inputBox").val("");
+					$("#inputBox").focus()
 				});
 
 				$("#azzera").click(function(){
