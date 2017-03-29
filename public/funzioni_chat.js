@@ -43,7 +43,7 @@ $(document).ready(function(){
 				$('#sendButton').click(function(){
 					console.log("inviato");
 					socket.emit('messaggio', $('#inputBox').val());
-					//return false;
+					return false;
 				});
 				
 				socket.on('messaggio', function(msg){

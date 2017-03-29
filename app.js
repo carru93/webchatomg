@@ -22,7 +22,13 @@ var server = http.listen(8000, function(req, res){
 
 io.on('connection', function(){
 	console.log('Nuovo utente connesso');
+	
 	io.on('disconnect', function(){
 		console.log('Utente disconnesso');
+	
+	socket.on('messaggio', function(msg){
+			console.log("ricevuto dal server");
+			io.sockets.emit('messaggio', msg);
+		});
 	});
 });
