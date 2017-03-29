@@ -1,5 +1,5 @@
 $(document).ready(function(){
-				
+
 				var char_scritti = 0;
 				$("#chars").text(char_scritti);
 			
@@ -37,4 +37,18 @@ $(document).ready(function(){
 						$('#sendButton').click();
 					}
 				});
+				
+				var socket = io();
+
+				$('#sendButton').click(function(){
+					console.log("inviato");
+					socket.emit('messaggio', $('#inputBox').val());
+					//return false;
+				});
+				
+				socket.on('messaggio', function(msg){
+					console.log("ricevuto");
+					$('#messagesBox').append($('<li>').text(msg));
+				});
+
 			});

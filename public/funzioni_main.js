@@ -1,4 +1,6 @@
 $(document).ready(function(){
+	var socket = io();
+	
 	$("#name").focus();	
 	
 	$("#name").keydown(function(e){
