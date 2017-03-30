@@ -20,15 +20,15 @@ var server = http.listen(8000, function(req, res){
 	console.log("server in ascolto su %s%s", host, port);
 });
 
-io.on('connection', function(){
+io.on('connection', function(socket){
 	console.log('Nuovo utente connesso');
 	
-	io.on('disconnect', function(){
+	socket.on('disconnect', function(){
 		console.log('Utente disconnesso');
-	
+		});	
+
 	socket.on('messaggio', function(msg){
-			console.log("ricevuto dal server");
+		//	console.log("ricevuto dal server: "+msg);
 			io.sockets.emit('messaggio', msg);
 		});
-	});
 });

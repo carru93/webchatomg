@@ -18,6 +18,7 @@
 	outline-style:double;
 	display:inline;
 	margin: 3px;
+	padding: 2px;
 }
 
 #titolo_chat{
@@ -58,8 +59,11 @@ p{
 
 }
 
-#mex{
+mex{
 	font-size:7pt;
 	font: italic;
 	color: red;
+	background-image: url("fumetto.png");
+	display: block;
 }
+

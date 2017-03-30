@@ -14,7 +14,7 @@ $(document).ready(function(){
 				
 				$("#color_selector").change(function(){
 					$("#username_title").css("color", $("#color_selector").val());	
-					$("mex").css("color", $("color_selector").val());
+					$("mex").css("color", $("#color_selector").val());
 				});
 				
 				$("#sendButton").click(function(){
@@ -22,6 +22,8 @@ $(document).ready(function(){
 					var l = $("#inputBox").val();
 					char_scritti += l.length;
 					$("#chars").text(char_scritti);
+					
+					socket.emit('messaggio', $('#inputBox').val());
 					
 					$("#inputBox").val("");
 					$("#inputBox").focus()
@@ -40,15 +42,16 @@ $(document).ready(function(){
 				
 				var socket = io();
 
-				$('#sendButton').click(function(){
+			/*	$('#sendButton').click(function(){
 					console.log("inviato");
-					socket.emit('messaggio', $('#inputBox').val());
+					console.log($('#inputBox').val());
 					return false;
-				});
+				});*/
 				
 				socket.on('messaggio', function(msg){
-					console.log("ricevuto");
-					$('#messagesBox').append($('<li>').text(msg));
+					//console.log("ricevuto");
+					//console.log(msg);
+					$('#messagesBox').append("<mex>"+msg+"</mex>");
 				});
 
 			});
